@@ -1,0 +1,9 @@
+* source AZ4
+C_C1         0 N00256  10uf  
+R_R1         N00256 3  2k  
+R_R2         5 3  9k  
+R_R3         0 5  4k  
+R_R4         4 3  4k  
+R_R5         0 4  2k  
+L_L1         N00225 N00256  10mH  
+V_V1         N00225 0 15Vdc

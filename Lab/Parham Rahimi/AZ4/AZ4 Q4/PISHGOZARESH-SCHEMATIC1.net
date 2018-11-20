@@ -1,0 +1,6 @@
+* source PISHGOZARESH
+R_R3         N01048 0  4.7k  
+C_C3         N01021 N01048  680p  
+L_L1         N00967 N01021  18m  
+V_V2         N00967 0  
++PULSE 0 4 .5m .5m .5m 18m 20m

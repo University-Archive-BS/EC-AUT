@@ -1,0 +1,44 @@
+
+**** 10/28/17 08:42:50 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pish_gozaresh"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ4\AZ4 Q4\pish_gozaresh-SCHEMATIC
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pish_gozaresh-SCHEMATIC1-pish_gozaresh.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 .1s 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\pish_gozaresh-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING pish_gozaresh-SCHEMATIC1.net ****
+* source PISH_GOZARESH
+V_V4         N03332 N03443  
++PULSE 0 4 .5m .5m .5m 18m 20m
+R_R7         N03413 N03443  4.7k  
+C_C3         N03386 N03413  680p  
+L_L1         N03332 N03386  16m  
+
+**** RESUMING pish_gozaresh-SCHEMATIC1-pish_gozaresh.sim.cir ****
+.END
+
+ERROR -- Node N03332 is floating
+ERROR -- Node N03443 is floating
+ERROR -- Node N03413 is floating
+ERROR -- Node N03386 is floating

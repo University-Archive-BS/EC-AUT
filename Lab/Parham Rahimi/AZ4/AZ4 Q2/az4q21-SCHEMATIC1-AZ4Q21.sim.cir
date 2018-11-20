@@ -1,0 +1,17 @@
+** Profile: "SCHEMATIC1-AZ4Q21"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ4\AZ4 Q2\az4q21-SCHEMATIC1-AZ4Q21.sim ] 
+
+** Creating circuit file "az4q21-SCHEMATIC1-AZ4Q21.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC DEC PARAM a 100 100k 20 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\az4q21-SCHEMATIC1.net" 
+
+
+.END

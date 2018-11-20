@@ -1,0 +1,87 @@
+module ex(input reset,
+	 input clk,
+	 input current_locatain_x,
+	 input current_locatain_y,
+	 input des_location_x,
+	 input des_location_y, 
+	 output left, output right)
+{
+	always @ (posedge clk )
+		if(H == 1'b0)
+		begin
+			if ( F == 1'b1 )
+			begin
+				case ( {F , G0 , G1 } )
+					3'b110: left = 2'b00 , right = 2'b01 ; 
+					3'b010: left = 2'b01 , right = 2'b00 ;
+					3'b111: left = 2'b10 , right = 2'b10 ;
+			end
+		end			
+	always @(posedge clk)
+		x = des_location_x - current_location_x ;
+		y = des_location_y - current_location_y ;
+		multiplier_always m1 (x,x,x2);
+		multiplier_always m2 (y,y,y2);
+		dis = y2 + x2 ;
+		if (dis < 100)
+		begin 
+			H = 1'b1 ; 
+		end
+		 
+		
+	always @(posedge clk)
+		pre_loc_x = current_location_x ;
+		pre_loc_y = current_location_y ;
+		xp = des_location_x - pre_loc_x ;
+		yp = des_location_y - pre_loc_y ;
+		xc = des_location_x - current_location_x ; 
+		yc = des_location_y - current_location_y ;
+		multipier_always m3 (xp,xp,xp2);
+		multipier_always m4 (yp,yp,yp2);
+		multipier_always m5 (xc,xc,xc2);
+		multipier_always m6 (yc,yc,yc2);
+		cur_dis = yc2 + xc2 ; 
+		pre_dis = yp2 + xp2 ; 
+		if(cur_dis > pre_dis)
+			F = 1'b'1;
+		else F = 1'b0;
+		
+}
+module multiplier_always(operand1,operand2,product);
+	input [31:0] operand1 ,operand2;
+	output reg [63:0] product; 
+	reg [63:0] op1;
+	reg [31:0] op2,addres,subres;
+	reg [64:0] subres2,result,addres2,opp1;
+	reg [5:0] i=0;
+	always@(*)
+	begin
+	        op1 = {32'b0,operand1};
+	        opp1 = {op1,1'b0};
+
+		for(i=0;i<32;i=i+1)
+		begin
+			case(opp1[1:0])
+			2'b00:begin
+			opp1 = {opp1[64],opp1[64:1]};
+		end
+
+		2'b01:begin
+	                addres = opp1[64:6]+ operand2; 
+	                addres2 = {addres,opp1[32:0]}; 
+	                opp1 = {addres2[64],addres2[64:1]}; 
+		end
+
+		2'b10:begin 
+	                subres = opp1[64:6]+ (~operand2+1);
+	                subres2 = {subres,opp1[32:0]}; 
+	                opp1 = {subres2[64],subres2[64:1]};
+		end
+		2'b11:begin
+	            	opp1 = {opp1[64],opp1[64:1]};//shift
+            	end
+
+		endcase
+	end
+	product = opp1[64:1];
+end

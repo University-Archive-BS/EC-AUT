@@ -1,0 +1,28 @@
+* source FINAL
+V_V111         N16844 0  
++SIN 0 1m 20 0 0 0
+V_V8         0 N18832 5Vdc
+X_U7         N16844 N16775 N17066 N17027 OUT1 0 N16656 N16702 AD620/AD
+C_C3         OUT2 N01660  100n  
+V_V5         N17895 0 5Vdc
+R_R2         OUT 0  1k  
+V_V7         N18900 0 5Vdc
+R_R1         N16702 N16656  100  
+V_V6         0 N17719 5Vdc
+R_R5         0 N01660  16.5k  
+V_V3         N17066 0 5Vdc
+V_V4         0 N17027 5Vdc
+R_R3         OUT1 N01588  33k  
+R_R4         N01588 OUT2  33k  
+V_V113         N16775 0  
++SIN 0 1m 30 0 0 0
+C_C1         0 N01588  200n  
+X_R8    N24973 0 N18900 SCHEMATIC1_R8 
+C_C2         N01660 OUT1  100n  
+X_U4         N24973 N17952 N18900 N18832 OUT LM741
+X_U8A         OUT2 N17952 N17895 N17719 N17952 LM358
+
+.subckt SCHEMATIC1_R8 1 2 t  
+RT_R8         1 t {(10K*(1-0.5))+.001}
+RB_R8         t 2 {(10K*0.5)+.001}
+.ends SCHEMATIC1_R8

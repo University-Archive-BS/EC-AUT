@@ -1,0 +1,17 @@
+** Profile: "SCHEMATIC1-parham"  [ d:\documents\polytechnic\term 3\electrical circuits lab\final\final-SCHEMATIC1-parham.sim ] 
+
+** Creating circuit file "final-SCHEMATIC1-parham.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ms 0 1ms 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\final-SCHEMATIC1.net" 
+
+
+.END

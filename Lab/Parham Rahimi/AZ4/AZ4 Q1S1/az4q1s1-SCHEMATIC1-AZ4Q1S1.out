@@ -1,0 +1,74 @@
+
+**** 10/26/17 11:31:17 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-AZ4Q1S1"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\Electrical Circuits Lab\AZ4 Q1S1\az4q1s1-SCHEMATIC1-AZ4Q1S1.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "az4q1s1-SCHEMATIC1-AZ4Q1S1.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\az4q1s1-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING az4q1s1-SCHEMATIC1.net ****
+* source AZ4Q1S1
+V_V1         1 0 15Vdc
+R_R1         1 2  2k  
+R_R2         3 2  8k  
+R_R3         4 2  4k  
+R_R4         3 4  3.5k  
+R_R5         0 3  4k  
+R_R6         0 4  2k  
+
+**** RESUMING az4q1s1-SCHEMATIC1-AZ4Q1S1.sim.cir ****
+.END
+
+**** 10/26/17 11:31:17 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-AZ4Q1S1"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\Electrical Circuits Lab\AZ4 Q1S1\az4q1s1-SCHEMATIC1-AZ4Q1S1.sim 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)   15.0000  (    2)   10.0000  (    3)    3.3333  (    4)    3.3333  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.500E-03
+
+    TOTAL POWER DISSIPATION   3.75E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

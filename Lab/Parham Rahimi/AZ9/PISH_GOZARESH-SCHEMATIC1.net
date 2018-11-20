@@ -1,0 +1,10 @@
+* source PISH_GOZARESH
+V_V3         0 N000033 9Vdc
+X_U1         N00365 N00225 N000032 N000033 N00416 LM741
+R_R1         N00306 N00225  10k  
+R_R2         N00225 N00416  10k  
+C_C2         N00225 N00416  100n  
+V_V6         N00306 0  
++SIN 0 1 100 0 0 0
+R_R3         0 N00365  10k  
+V_V2         N000032 0 9Vdc

@@ -1,0 +1,8 @@
+* source AZ4Q1S1
+V_V1         1 0 15Vdc
+R_R1         1 2  2k  
+R_R2         3 2  8k  
+R_R3         4 2  4k  
+R_R4         3 4  3.5k  
+R_R5         0 3  4k  
+R_R6         0 4  2k  

@@ -1,0 +1,48 @@
+
+**** 10/26/17 11:55:29 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-AZ4"  [ d:\documents\polytechnic\term 3\electrical circuits lab\az4 q1s2\az4-schematic1-az4.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "az4-schematic1-az4.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 2V 0.1 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\az4-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING az4-SCHEMATIC1.net ****
+* source AZ4
+C_C1         0 N00256  10uf  
+R_R1         N00256 3  2k  
+R_R2         5 3  9k  
+R_R3         0 5  4k  
+R_R4         4 3  4k  
+R_R5         0 4  2k  
+L_L1         N00225 N00256  10mH  
+V_V1         N00225 0 15Vdc
+
+**** RESUMING az4-schematic1-az4.sim.cir ****
+.END
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

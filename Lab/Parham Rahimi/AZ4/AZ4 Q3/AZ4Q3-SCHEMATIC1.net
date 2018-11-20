@@ -1,0 +1,4 @@
+* source AZ4Q3
+V_V1         N00147 0 DC 0Vdc AC 10Vac 
+R_R1         N00147 N00181  1k  
+L_L1         0 N00181  40mH  

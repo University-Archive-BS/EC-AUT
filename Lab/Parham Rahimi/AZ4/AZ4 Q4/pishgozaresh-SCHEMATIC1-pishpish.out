@@ -1,0 +1,73 @@
+
+**** 10/28/17 08:54:25 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pishpish"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ4\AZ4 Q4\pishgozaresh-SCHEMATIC1-pish
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pishgozaresh-SCHEMATIC1-pishpish.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 .1s 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\pishgozaresh-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING pishgozaresh-SCHEMATIC1.net ****
+* source PISHGOZARESH
+R_R3         N01048 0  4.7k  
+C_C3         N01021 N01048  680p  
+L_L1         N00967 N01021  18m  
+V_V2         N00967 0  
++PULSE 0 4 .5m .5m .5m 18m 20m
+
+**** RESUMING pishgozaresh-SCHEMATIC1-pishpish.sim.cir ****
+.END
+
+**** 10/28/17 08:54:25 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pishpish"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ4\AZ4 Q4\pishgozaresh-SCHEMATIC1-pish
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00967)    0.0000 (N01021)    0.0000 (N01048)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

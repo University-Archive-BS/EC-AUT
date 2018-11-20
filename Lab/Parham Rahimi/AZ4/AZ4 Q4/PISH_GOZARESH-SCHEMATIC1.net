@@ -1,0 +1,6 @@
+* source PISH_GOZARESH
+V_V4         N03332 0  
++PULSE 0 4 .5m .5m .5m 18m 20m
+R_R7         N03413 0  4.7k  
+C_C3         N03386 N03413  680p  
+L_L1         N03332 N03386  16m  

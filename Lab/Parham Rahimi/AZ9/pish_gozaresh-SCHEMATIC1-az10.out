@@ -1,0 +1,241 @@
+
+**** 12/26/17 14:13:37 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-az10"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ9\pish_gozaresh-SCHEMATIC1-az10.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pish_gozaresh-SCHEMATIC1-az10.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 200 100 1000
+.OP
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\pish_gozaresh-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING pish_gozaresh-SCHEMATIC1.net ****
+* source PISH_GOZARESH
+V_V3         0 N000033 9Vdc
+X_U1         N00365 N00225 N000032 N000033 N00416 LM741
+R_R1         N00306 N00225  10k  
+R_R2         N00225 N00416  10k  
+C_C2         N00225 N00416  100n  
+V_V6         N00306 0  
++SIN 0 1 100 0 0 0
+R_R3         0 N00365  10k  
+V_V2         N000032 0 9Vdc
+
+**** RESUMING pish_gozaresh-SCHEMATIC1-az10.sim.cir ****
+.END
+
+**** 12/26/17 14:13:37 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-az10"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ9\pish_gozaresh-SCHEMATIC1-az10.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.dx X_U1.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 12/26/17 14:13:37 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-az10"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ9\pish_gozaresh-SCHEMATIC1-az10.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.qx 
+               NPN             
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 12/26/17 14:13:37 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-az10"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ9\pish_gozaresh-SCHEMATIC1-az10.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00225)-778.0E-06 (N00306)    0.0000 (N00365)-797.3E-06 (N00416)-758.3E-06     
+
+(N000032)    9.0000                   (N000033)   -9.0000                       
+
+(X_U1.x_lm741.6) 71.18E-09            (X_U1.x_lm741.7)-758.2E-06                
+
+(X_U1.x_lm741.8)-758.2E-06            (X_U1.x_lm741.9)    0.0000                
+
+(X_U1.x_lm741.10)    -.6085           (X_U1.x_lm741.11)    8.9603               
+
+(X_U1.x_lm741.12)    8.9603           (X_U1.x_lm741.13)    -.5946               
+
+(X_U1.x_lm741.14)    -.5946           (X_U1.x_lm741.53)    8.0000               
+
+(X_U1.x_lm741.54)   -8.0000           (X_U1.x_lm741.90) 1.967E-06               
+
+(X_U1.x_lm741.91)   40.0000           (X_U1.x_lm741.92)  -40.0000               
+
+(X_U1.x_lm741.99)    0.0000           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -1.006E-03
+    V_V6        -7.780E-08
+    V_V2        -1.006E-03
+    X_U1.x_lm741.vb   7.118E-13
+    X_U1.x_lm741.vc   8.002E-12
+    X_U1.x_lm741.ve   8.185E-12
+    X_U1.x_lm741.vlim   1.967E-09
+    X_U1.x_lm741.vlp  -4.000E-11
+    X_U1.x_lm741.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.81E-02  WATTS
+
+
+**** 12/26/17 14:13:37 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-az10"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ9\pish_gozaresh-SCHEMATIC1-az10.sim ] 
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1.x_lm741.ga         X_U1.x_lm741.gcm      
+I-SOURCE    -3.628E-09              -3.627E-09            
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1.x_lm741.egnd     
+V-SOURCE     0.000E+00            
+I-SOURCE    -4.821E-08            
+
+
+**** CURRENT-CONTROLLED CURRENT SOURCES
+
+
+NAME         X_U1.x_lm741.fb       
+I-SOURCE     7.786E-06            
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         X_U1.x_lm741.hlim     
+V-SOURCE     1.967E-06            
+I-SOURCE    -3.934E-18            
+
+
+**** DIODES
+
+
+NAME         X_U1.x_lm741.dc         X_U1.x_lm741.de       
+MODEL        X_U1.x_lm741.dy         X_U1.x_lm741.dy       
+ID          -8.00E-12               -8.00E-12             
+VD          -8.00E+00               -8.00E+00             
+REQ          1.00E+12                1.00E+12             
+CAP          3.33E-12                3.33E-12             
+
+NAME         X_U1.x_lm741.dlp        X_U1.x_lm741.dln      
+MODEL        X_U1.x_lm741.dx         X_U1.x_lm741.dx       
+ID          -4.00E-11               -4.00E-11             
+VD          -4.00E+01               -4.00E+01             
+REQ          1.00E+12                1.00E+12             
+CAP          0.00E+00                0.00E+00             
+
+NAME         X_U1.x_lm741.dp       
+MODEL        X_U1.x_lm741.dx       
+ID          -1.80E-11             
+VD          -1.80E+01             
+REQ          1.00E+12             
+CAP          0.00E+00             
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         X_U1.x_lm741.q1         X_U1.x_lm741.q2       
+MODEL        X_U1.x_lm741.qx         X_U1.x_lm741.qx       
+IB           7.98E-08                7.97E-08             
+IC           7.48E-06                7.48E-06             
+VBE          5.94E-01                5.94E-01             
+VBC         -8.96E+00               -8.96E+00             
+VCE          9.55E+00                9.55E+00             
+BETADC       9.38E+01                9.38E+01             
+GM           2.89E-04                2.89E-04             
+RPI          3.24E+05                3.24E+05             
+RX           0.00E+00                0.00E+00             
+RO           1.00E+12                1.00E+12             
+CBE          0.00E+00                0.00E+00             
+CBC          0.00E+00                0.00E+00             
+CJS          0.00E+00                0.00E+00             
+BETAAC       9.38E+01                9.38E+01             
+CBX/CBX2     0.00E+00                0.00E+00             
+FT/FT2       4.60E+15                4.60E+15             
+
+
+WARNING -- No AC sources -- AC Sweep ignored
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

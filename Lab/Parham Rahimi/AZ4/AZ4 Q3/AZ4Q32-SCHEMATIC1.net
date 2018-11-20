@@ -1,0 +1,4 @@
+* source AZ4Q32
+V_V1         N00146 0 DC 0Vdc AC 10Vac 
+R_R1         N00146 N00180  5k  
+C_C1         0 N00180  1u  

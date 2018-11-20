@@ -1,0 +1,46 @@
+
+**** 12/26/17 14:10:23 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-az10"  [ D:\DOCUMENTS\POLYTECHNIC\TERM 3\ELECTRICAL CIRCUITS LAB\AZ9\pish_gozaresh-SCHEMATIC1-az10.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pish_gozaresh-SCHEMATIC1-az10.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 200 100 100
+----------------$
+ERROR -- Invalid value
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\pish_gozaresh-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING pish_gozaresh-SCHEMATIC1.net ****
+* source PISH_GOZARESH
+V_V3         0 N000033 9Vdc
+X_U1         N00365 N00225 N000032 N000033 N00416 LM741
+R_R1         N00306 N00225  10k  
+R_R2         N00225 N00416  10k  
+C_C2         N00225 N00416  100n  
+V_V6         N00306 0  
++SIN 0 1 100 0 0 0
+R_R3         0 N00365  10k  
+V_V2         N000032 0 9Vdc
+
+**** RESUMING pish_gozaresh-SCHEMATIC1-az10.sim.cir ****
+.END
+

@@ -1,0 +1,8 @@
+* source AZ4Q21
+V_V1         N00337 N00821 15Vdc
+R_R5         VA 0  {a}  
+R_R1         VA N00337  2.2k  
+R_R2         0 N00337  3.3k  
+R_R3         N00821 VA  4.7k  
+R_R4         N00821 0  1.8k  
+.PARAM  a=1k
